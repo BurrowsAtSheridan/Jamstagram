@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Image Details {% endblock title %}
+{% block content %}
+<div class="item-entry">
+<h2>{{object.title}}</h2>
+<article>
+  <p>Posted by {{ object.author }} | {{ object.date }}</p>
+
+  <img src="{{ object.photo.url }}" class="art-img">
+  <p> {{object.description |linebreaks}}
+
+
+</article>
+</div>
+
+<p><a href="{% url 'image_delete' object.pk %}">Delete</a> |<a href="{% url 'image_edit' object.pk %}"> Edit your post </a>
+
+
+<p><a href="{% url 'image_list' %}">back to images</a>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="jumbotron">
+<h1 class="display-4">Jamstagram</h1>
+<p class="lead">Good images of ducks</p>
+<a class='btn btn-primary btn-lg' href="{% url 'image_list' %}" role="button">Look at ducks</a>
+</div>
+
+{% endblock content %}

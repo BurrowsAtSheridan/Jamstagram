@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Upload new image {% endblock title %}
+
+{% block content %}
+<h1>Upload a new image</h1>
+<form method="post" action=""> {% csrf_token %}
+{{ form.as_p }}
+<button class="btn-btn-success ml2" type="Submit">Submit new Image</button
+
+</form>
+{% endblock content %}
